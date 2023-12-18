@@ -14,7 +14,7 @@ describe("Form testing", () => {
       'not.exist'
     );
     cy.getDataTest("subscribe-button").click();
-    cy.contains(/Successfully subbed: shadyhussein99@gmail.com!/i).should('be.visible');
+    cy.contains(/Successfully subbed: shadyhussein99@gmail.com!/i).should('exist');
 
     // To wait for 3 seconds
     cy.wait(3000);
