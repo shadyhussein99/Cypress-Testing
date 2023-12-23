@@ -20,7 +20,7 @@ export default function GrudgeList(){
     const [grudges, dispatch] = useReducer(grudgeReducer, [])
     const [inputValue, setInputValue] = useState('')
 
-    console.log({grudges})
+    // console.log({grudges})
 
     const title = grudges.length > 0 ? 'Grudges' : 'Add Some Grudges'
 
@@ -39,10 +39,10 @@ export default function GrudgeList(){
     }
 
     return (
-        <div style={{margin: '20px'}}>
+        <div data-test="grudge-list" style={{margin: '20px'}}>
             <h3 style={{margin: '20px 0px'}}>{title}</h3>
             <div>
-            <TextField 
+            <TextField            
             label="Add Grudge" 
             variant="filled" 
             value={inputValue}
@@ -50,7 +50,7 @@ export default function GrudgeList(){
             style={{backgroundColor: 'white'}}
             />
             </div>
-            <Button onClick={addGrudge}>
+            <Button data-test="add-grudge-button" onClick={addGrudge}>
                 Add Grudge
             </Button>
             <ul style={{color: 'white', listStyleType: 'none'}}>

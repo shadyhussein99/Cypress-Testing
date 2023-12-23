@@ -14,5 +14,5 @@ export default function PostButton() {
       });
   }
 
-  return <Button data-test='intercept-button' onClick={handleClick}>Post Data</Button>;
+  return <Button data-test='post-button' onClick={handleClick}>Post Data</Button>;
 }
